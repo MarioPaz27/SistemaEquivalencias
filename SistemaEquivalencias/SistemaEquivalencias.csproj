@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{660CEBFC-018A-40D1-BF6B-53BE735CBD5D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaEquivalencias</RootNamespace>
+    <AssemblyName>SistemaEquivalencias</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Account\Web.config" />
+    <Content Include="ProcEva-Otor_Equivalencia\Default.aspx" />
+    <Content Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master" />
+    <Content Include="ProcInsercion_Equivalencia\Site-ProcInsercion.Master" />
+    <Content Include="ProSolicEs_NuevoIngreso\Default.aspx" />
+    <Content Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="images\black_file.gif" />
+    <Content Include="images\brown_file.gif" />
+    <Content Include="images\demo\100x70.gif" />
+    <Content Include="images\demo\130x100.gif" />
+    <Content Include="images\demo\130x130.gif" />
+    <Content Include="images\demo\190x90.gif" />
+    <Content Include="images\demo\200x80.gif" />
+    <Content Include="images\demo\240x90.gif" />
+    <Content Include="images\demo\300x120.gif" />
+    <Content Include="images\demo\440x215.gif" />
+    <Content Include="images\demo\450x320.gif" />
+    <Content Include="images\demo\450x380.gif" />
+    <Content Include="images\demo\60x60.gif" />
+    <Content Include="images\demo\80x80.gif" />
+    <Content Include="images\demo\avatar.gif" />
+    <Content Include="images\demo\imgl.gif" />
+    <Content Include="images\demo\imgr.gif" />
+    <Content Include="images\demo\index.html" />
+    <Content Include="images\demo\video.gif" />
+    <Content Include="images\footer_bg.gif" />
+    <Content Include="images\form_input_long.gif" />
+    <Content Include="images\index.html" />
+    <Content Include="images\search.gif" />
+    <Content Include="images\shadow.gif" />
+    <Content Include="images\social\facebook.gif" />
+    <Content Include="images\social\flickr.gif" />
+    <Content Include="images\social\index.html" />
+    <Content Include="images\social\rss.gif" />
+    <Content Include="images\social\twitter.gif" />
+    <Content Include="images\social\youtube.gif" />
+    <Content Include="layout\images\index.html" />
+    <Content Include="layout\images\search.gif" />
+    <Content Include="layout\index.html" />
+    <Content Include="layout\scripts\galleryviewthemes\index.html" />
+    <Content Include="layout\scripts\galleryviewthemes\jquery.easing.1.3.js" />
+    <Content Include="layout\scripts\galleryviewthemes\jquery.galleryview.2.1.1.min.js" />
+    <Content Include="layout\scripts\galleryviewthemes\jquery.galleryview.setup.js" />
+    <Content Include="layout\scripts\galleryviewthemes\jquery.timers.1.2.js" />
+    <Content Include="layout\scripts\galleryviewthemes\loader.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\dark\index.html" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\dark\next.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\dark\panel-nav-next.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\dark\panel-nav-prev.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\dark\prev.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\index.html" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\light\index.html" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\light\next.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\light\panel-nav-next.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\light\panel-nav-prev.gif" />
+    <Content Include="layout\scripts\galleryviewthemes\themes\light\prev.gif" />
+    <Content Include="layout\scripts\index.html" />
+    <Content Include="layout\scripts\jquery.min.js" />
+    <Content Include="layout\scripts\jquery.ui.min.js" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="layout\scripts\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="layout\scripts\prettyphoto\images\default\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\default\loader.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\default\sprite.png" />
+    <Content Include="layout\scripts\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="layout\scripts\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="layout\scripts\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="layout\scripts\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="layout\scripts\prettyphoto\images\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="layout\scripts\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="layout\scripts\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\light_rounded\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="layout\scripts\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="layout\scripts\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="layout\scripts\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\light_square\index.html" />
+    <Content Include="layout\scripts\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="layout\scripts\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="layout\scripts\prettyphoto\index.html" />
+    <Content Include="layout\scripts\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="layout\scripts\prettyphoto\prettyPhoto.css" />
+    <Content Include="layout\styles\3_column.css" />
+    <Content Include="layout\styles\featured_slide.css" />
+    <Content Include="layout\styles\forms.css" />
+    <Content Include="layout\styles\gallery.css" />
+    <Content Include="layout\styles\homepage.css" />
+    <Content Include="layout\styles\images\black_file.gif" />
+    <Content Include="layout\styles\images\brown_file.gif" />
+    <Content Include="layout\styles\images\footer_bg.gif" />
+    <Content Include="layout\styles\images\form_input_long.gif" />
+    <Content Include="layout\styles\images\index.html" />
+    <Content Include="layout\styles\images\shadow.gif" />
+    <Content Include="layout\styles\index.html" />
+    <Content Include="layout\styles\layout.css" />
+    <Content Include="layout\styles\navi.css" />
+    <Content Include="layout\styles\portfolio.css" />
+    <Content Include="layout\styles\tables.css" />
+    <Content Include="pages\3-columns.html" />
+    <Content Include="pages\full-width.html" />
+    <Content Include="pages\gallery.html" />
+    <Content Include="pages\index.html" />
+    <Content Include="pages\portfolio.html" />
+    <Content Include="pages\style-demo.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\black_file.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\brown_file.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\100x70.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\130x100.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\130x130.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\190x90.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\200x80.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\240x90.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\300x120.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\440x215.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\450x320.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\450x380.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\60x60.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\80x80.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\avatar.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\imgl.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\imgr.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\demo\video.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\footer_bg.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\form_input_long.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\search.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\shadow.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\social\facebook.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\social\flickr.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\social\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\social\rss.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\social\twitter.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\images\social\youtube.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\images\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\images\search.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\jquery.easing.1.3.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\jquery.galleryview.2.1.1.min.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\jquery.galleryview.setup.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\jquery.timers.1.2.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\next.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\panel-nav-next.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\panel-nav-prev.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\prev.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\light\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\light\next.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\light\panel-nav-next.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\light\panel-nav-prev.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\galleryviewthemes\themes\light\prev.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\jquery.min.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\jquery.ui.min.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\sprite.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_square\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\scripts\prettyphoto\prettyPhoto.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\3_column.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\featured_slide.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\forms.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\gallery.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\homepage.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\images\black_file.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\images\brown_file.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\images\footer_bg.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\images\form_input_long.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\images\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\images\shadow.gif" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\layout.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\navi.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\portfolio.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\layout\styles\tables.css" />
+    <Content Include="ProcEva-Otor_Equivalencia\pages\3-columns.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\pages\full-width.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\pages\gallery.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\pages\index.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\pages\portfolio.html" />
+    <Content Include="ProcEva-Otor_Equivalencia\pages\style-demo.html" />
+    <Content Include="ProcInsercion_Equivalencia\images\black_file.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\brown_file.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\100x70.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\130x100.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\130x130.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\190x90.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\200x80.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\240x90.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\300x120.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\440x215.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\450x320.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\450x380.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\60x60.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\80x80.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\avatar.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\imgl.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\imgr.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\images\demo\video.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\footer_bg.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\form_input_long.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\images\search.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\shadow.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\social\facebook.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\social\flickr.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\social\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\images\social\rss.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\social\twitter.gif" />
+    <Content Include="ProcInsercion_Equivalencia\images\social\youtube.gif" />
+    <Content Include="ProcInsercion_Equivalencia\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\images\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\images\search.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\jquery.easing.1.3.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\jquery.galleryview.2.1.1.min.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\jquery.galleryview.setup.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\jquery.timers.1.2.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\next.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\panel-nav-next.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\panel-nav-prev.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\dark\prev.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\light\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\light\next.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\light\panel-nav-next.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\light\panel-nav-prev.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\galleryviewthemes\themes\light\prev.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\jquery.min.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\jquery.ui.min.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\sprite.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_square\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="ProcInsercion_Equivalencia\layout\scripts\prettyphoto\prettyPhoto.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\3_column.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\featured_slide.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\forms.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\gallery.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\homepage.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\images\black_file.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\images\brown_file.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\images\footer_bg.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\images\form_input_long.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\images\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\images\shadow.gif" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\layout.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\navi.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\portfolio.css" />
+    <Content Include="ProcInsercion_Equivalencia\layout\styles\tables.css" />
+    <Content Include="ProcInsercion_Equivalencia\pages\3-columns.html" />
+    <Content Include="ProcInsercion_Equivalencia\pages\full-width.html" />
+    <Content Include="ProcInsercion_Equivalencia\pages\gallery.html" />
+    <Content Include="ProcInsercion_Equivalencia\pages\index.html" />
+    <Content Include="ProcInsercion_Equivalencia\pages\portfolio.html" />
+    <Content Include="ProcInsercion_Equivalencia\pages\style-demo.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\black_file.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\brown_file.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\100x70.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\130x100.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\130x130.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\190x90.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\200x80.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\240x90.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\300x120.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\440x215.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\450x320.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\450x380.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\60x60.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\80x80.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\avatar.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\imgl.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\imgr.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\demo\video.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\footer_bg.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\form_input_long.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\search.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\shadow.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\social\facebook.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\social\flickr.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\social\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\social\rss.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\social\twitter.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\images\social\youtube.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\images\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\images\search.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\jquery.easing.1.3.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\jquery.galleryview.2.1.1.min.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\jquery.galleryview.setup.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\jquery.timers.1.2.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\dark\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\dark\next.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\dark\panel-nav-next.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\dark\panel-nav-prev.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\dark\prev.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\light\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\light\next.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\light\panel-nav-next.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\light\panel-nav-prev.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\galleryviewthemes\themes\light\prev.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\jquery.min.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\jquery.ui.min.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\sprite.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_rounded\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_square\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\scripts\prettyphoto\prettyPhoto.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\3_column.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\featured_slide.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\forms.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\gallery.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\homepage.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\images\black_file.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\images\brown_file.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\images\footer_bg.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\images\form_input_long.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\images\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\images\shadow.gif" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\layout.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\navi.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\portfolio.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\layout\styles\tables.css" />
+    <Content Include="ProSolicEs_NuevoIngreso\pages\3-columns.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\pages\full-width.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\pages\gallery.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\pages\index.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\pages\portfolio.html" />
+    <Content Include="ProSolicEs_NuevoIngreso\pages\style-demo.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="ProcEva-Otor_Equivalencia\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcEva-Otor_Equivalencia\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master.cs">
+      <DependentUpon>Site-ProcEva-Otor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master.designer.cs">
+      <DependentUpon>Site-ProcEva-Otor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProcInsercion_Equivalencia\Site-ProcInsercion.Master.cs">
+      <DependentUpon>Site-ProcInsercion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcInsercion_Equivalencia\Site-ProcInsercion.Master.designer.cs">
+      <DependentUpon>Site-ProcInsercion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProSolicEs_NuevoIngreso\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master.cs">
+      <DependentUpon>Site-ProcSolicEs.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master.designer.cs">
+      <DependentUpon>Site-ProcSolicEs.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54247</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54247/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
