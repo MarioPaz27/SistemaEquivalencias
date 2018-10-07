@@ -3,6 +3,7 @@
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <div id="container" class="clear">
     <h2><%: Title %>.</h2>
 
     <div class="row">
@@ -10,6 +11,7 @@
             <section id="loginForm">
                 <div class="form-horizontal">
                     <h4>Utilice una cuenta local para iniciar sesión.</h4>
+                    <asp:Label runat="server" ID="lbl_Test" Text=""/>
                     <hr />
                     <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
                         <p class="text-danger">
@@ -62,4 +64,5 @@
             </section>
         </div>
     </div>
+</div>
 </asp:Content>

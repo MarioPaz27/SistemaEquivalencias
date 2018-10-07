@@ -10,8 +10,24 @@ namespace SistemaEquivalencias.Account
 {
     public partial class Login : Page
     {
+        private String roleParameter;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["parameter"] == "nuevoIngreso")
+            {
+                roleParameter = "nuevoIngreso";
+            }
+
+            if (Request.QueryString["parameter"] == "equivalencias")
+            {
+                roleParameter = "equivalencias";
+            }
+
+            if (Request.QueryString["parameter"] == "managerRole")
+            {
+                roleParameter = "managerRole";
+            }
+
             RegisterHyperLink.NavigateUrl = "Register";
             // Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
             //ForgotPasswordHyperLink.NavigateUrl = "Forgot";

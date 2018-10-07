@@ -190,7 +190,6 @@
     <Content Include="Account\Web.config" />
     <Content Include="ProcEva-Otor_Equivalencia\Default.aspx" />
     <Content Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master" />
-    <Content Include="ProcInsercion_Equivalencia\Site-ProcInsercion.Master" />
     <Content Include="ProSolicEs_NuevoIngreso\Default.aspx" />
     <Content Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -311,12 +310,6 @@
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\portfolio.css" />
     <Content Include="layout\styles\tables.css" />
-    <Content Include="pages\3-columns.html" />
-    <Content Include="pages\full-width.html" />
-    <Content Include="pages\gallery.html" />
-    <Content Include="pages\index.html" />
-    <Content Include="pages\portfolio.html" />
-    <Content Include="pages\style-demo.html" />
     <Content Include="ProcEva-Otor_Equivalencia\images\black_file.gif" />
     <Content Include="ProcEva-Otor_Equivalencia\images\brown_file.gif" />
     <Content Include="ProcEva-Otor_Equivalencia\images\demo\100x70.gif" />
@@ -871,13 +864,6 @@
     <Compile Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master.designer.cs">
       <DependentUpon>Site-ProcEva-Otor.Master</DependentUpon>
     </Compile>
-    <Compile Include="ProcInsercion_Equivalencia\Site-ProcInsercion.Master.cs">
-      <DependentUpon>Site-ProcInsercion.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProcInsercion_Equivalencia\Site-ProcInsercion.Master.designer.cs">
-      <DependentUpon>Site-ProcInsercion.Master</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProSolicEs_NuevoIngreso\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -918,6 +904,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ManagerSystem\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,7 +11,7 @@ namespace SistemaEquivalencias.ProSolicEs_NuevoIngreso
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
