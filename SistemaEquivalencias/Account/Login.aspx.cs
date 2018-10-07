@@ -16,27 +16,31 @@ namespace SistemaEquivalencias.Account
             if (Request.QueryString["parameter"] == "nuevoIngreso")
             {
                 roleParameter = "nuevoIngreso";
+                lbl_Test.Text = "Este Inicio de Sesión es únicamente para Nuevo Ingreso";
             }
 
             if (Request.QueryString["parameter"] == "equivalencias")
             {
                 roleParameter = "equivalencias";
+                lbl_Test.Text = "Este Inicio de Sesión es únicamente para Equivalencias";
             }
 
             if (Request.QueryString["parameter"] == "managerRole")
             {
                 roleParameter = "managerRole";
+                lbl_Test.Text = "Este Inicio de Sesión es únicamente para el Administrador";
             }
 
-            RegisterHyperLink.NavigateUrl = "Register";
-            // Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
-            //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
+            
+            //RegisterHyperLink.NavigateUrl = "Register";
+            //// Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
+            ////ForgotPasswordHyperLink.NavigateUrl = "Forgot";
+            //OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
+            //var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
+            //if (!String.IsNullOrEmpty(returnUrl))
+            //{
+            //    RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+            //}
         }
 
         protected void LogIn(object sender, EventArgs e)

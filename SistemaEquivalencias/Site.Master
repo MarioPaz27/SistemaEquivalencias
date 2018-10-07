@@ -8,6 +8,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Equivalencias</title>
+<link rel="Stylesheet" href="Content/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
@@ -29,7 +30,7 @@
             <div class="fl_right">
                 <p><asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <a runat="server" href="~/Account/Login?parameter=nuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/ProcEva-Otor_Equivalencia/">Equivalencias</a> | <a runat="server" href="~/Account/Login">Administrador</a>
+                            <a runat="server" href="~/Account/Login?parameter=nuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=managerRole">Administrador</a>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> !</a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
