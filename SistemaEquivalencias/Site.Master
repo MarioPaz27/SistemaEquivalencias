@@ -39,7 +39,7 @@
                 </p>
             </div>
           <%--menu de Administrador--%>
-    <div id="topnavAdmin" runat="server">
+    <div id="topnavAdmin" class="topnav" runat="server">
       <ul>
         <li><a href="../Default">Home</a></li>
         <li><a href="../Contact.aspx">Contacto</a></li>
@@ -47,15 +47,15 @@
       </ul>
     </div>
           <%--menu por defecto--%>
-    <%--<div id="topnav" runat="server">
+    <div id="topnav" class="topnav" runat="server">
       <ul>
         <li><a href="../Default">Home</a></li>
         <li><a href="../Contact.aspx">Contacto</a></li>
         <li><a href="../About.aspx">Acerca de</a></li>
       </ul>
-    </div>--%>
+    </div>
           <%--menu para Nuevo Ingreso--%>
-    <div id="topnavNI" runat="server">
+    <div id="topnavNI" class="topnav" runat="server">
       <ul>
         <li><a href="../Default">Home</a></li>
         <li><a href="../Contact.aspx">Contacto</a></li>
@@ -63,7 +63,7 @@
       </ul>
     </div>
           <%--menu de Equivalencias--%>
-    <div id="topnavEquiv" runat="server">
+    <div id="topnavEquiv" class="topnav" runat="server">
       <ul>
         <li><a href="../Default">Home</a></li>
         <li><a href="../Contact.aspx">Contacto</a></li>

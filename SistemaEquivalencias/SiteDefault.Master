@@ -33,20 +33,11 @@
                             <a runat="server" href="~/Account/Login?parameter=nuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=managerRole">Administrador</a>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/index" OnLoggingOut="Unnamed_LoggingOut" />
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </p>
             </div>
-          <%--menu por defecto--%>
-    <div id="topnav" runat="server">
-      <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
-      </ul>
-    </div>
-
   </div>
 </div>
         <asp:ScriptManager runat="server">

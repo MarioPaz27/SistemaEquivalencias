@@ -79,7 +79,7 @@ namespace SistemaEquivalencias
             var usuario = Context.User.Identity.GetUserId();
             if (usuario == null)
             {
-                Response.Redirect("~/Account/login");
+                Response.Redirect("~/Index");
             }
             SacarMiRole(usuario);
             CargarMenu(miPerfil);
@@ -109,7 +109,7 @@ namespace SistemaEquivalencias
                 this.topnavAdmin.Visible = true;
                 this.topnavNI.Visible = false;
                 this.topnavEquiv.Visible = false;
-                //this.topnav.Visible = false;
+                this.topnav.Visible = false;
             }
             else
             {
@@ -118,21 +118,21 @@ namespace SistemaEquivalencias
                     this.topnavAdmin.Visible = false;
                     this.topnavNI.Visible = false;
                     this.topnavEquiv.Visible = true;
-                    //this.topnav.Visible = false;
+                    this.topnav.Visible = false;
                 }
                 else if(prmRole == "NuevoIngreso")
                 {
                     this.topnavAdmin.Visible = false;
                     this.topnavNI.Visible = true;
                     this.topnavEquiv.Visible = false;
-                    //this.topnav.Visible = false;
+                    this.topnav.Visible = false;
                 }
                 else
                 {
                     this.topnavAdmin.Visible = false;
                     this.topnavNI.Visible = false;
                     this.topnavEquiv.Visible = false;
-                    //this.topnav.Visible = true;
+                    this.topnav.Visible = false;
                 }
             }
         }
