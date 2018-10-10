@@ -20,6 +20,11 @@ namespace SistemaEquivalencias.Account
             private set;
         }
 
+        public String miPerfil;
+
+        ApplicationDbContext role = new ApplicationDbContext();
+        UserManager adminUsers = new UserManager();
+
         private bool HasPassword(ApplicationUserManager manager)
         {
             return manager.HasPassword(User.Identity.GetUserId());
@@ -35,6 +40,15 @@ namespace SistemaEquivalencias.Account
 
         protected void Page_Load()
         {
+            //validando el rol del usuario y verificando que no sea null
+            var usuario = Context.User.Identity.GetUserId();
+            if (usuario == null)
+            {
+                Response.Redirect("~/Account/Login.aspx");
+            }
+
+            SacarMiRole(usuario);
+
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
@@ -123,6 +137,18 @@ namespace SistemaEquivalencias.Account
             manager.SetTwoFactorEnabled(User.Identity.GetUserId(), true);
 
             Response.Redirect("/Account/Manage");
+        }
+
+        protected void SacarMiRole(string idUsuario)
+        {
+            var miRole = (from rol in role.Roles select rol).ToList();
+            foreach (var losroles in miRole)
+            {
+                if (adminUsers.IsInRole(idUsuario, losroles.Name))
+                {
+                    miPerfil = losroles.Name.ToString();
+                }
+            }
         }
     }
 }

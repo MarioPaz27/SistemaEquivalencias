@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SistemaEquivalencias.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteDefault.master.cs" Inherits="SistemaEquivalencias.SiteDefault" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -38,32 +38,8 @@
                     </asp:LoginView>
                 </p>
             </div>
-          <%--menu de Administrador--%>
-    <div id="topnavAdmin" runat="server">
-      <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
-      </ul>
-    </div>
           <%--menu por defecto--%>
-    <%--<div id="topnav" runat="server">
-      <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
-      </ul>
-    </div>--%>
-          <%--menu para Nuevo Ingreso--%>
-    <div id="topnavNI" runat="server">
-      <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
-      </ul>
-    </div>
-          <%--menu de Equivalencias--%>
-    <div id="topnavEquiv" runat="server">
+    <div id="topnav" runat="server">
       <ul>
         <li><a href="../Default">Home</a></li>
         <li><a href="../Contact.aspx">Contacto</a></li>

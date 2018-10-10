@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Administrar contraseña" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManagePassword.aspx.cs" Inherits="SistemaEquivalencias.Account.ManagePassword" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<div class="wrapper row3">
+  <div id="container" class="clear">
     <h2><%: Title %>.</h2>
     <div class="form-horizontal">
         <section id="passwordForm">
@@ -53,7 +55,7 @@
                     <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
                     <div class="form-group">
                         <asp:Label runat="server" ID="CurrentPasswordLabel" AssociatedControlID="CurrentPassword" CssClass="col-md-2 control-label">Contraseña actual</asp:Label>
-                        <div class="col-md-10">
+                        <div class="col-md-4">
                             <asp:TextBox runat="server" ID="CurrentPassword" TextMode="Password" CssClass="form-control" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="CurrentPassword"
                                 CssClass="text-danger" ErrorMessage="El campo de contraseña actual es obligatorio."
@@ -62,7 +64,7 @@
                     </div>
                     <div class="form-group">
                         <asp:Label runat="server" ID="NewPasswordLabel" AssociatedControlID="NewPassword" CssClass="col-md-2 control-label">Nueva contraseña</asp:Label>
-                        <div class="col-md-10">
+                        <div class="col-md-4">
                             <asp:TextBox runat="server" ID="NewPassword" TextMode="Password" CssClass="form-control" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="NewPassword"
                                 CssClass="text-danger" ErrorMessage="La contraseña nueva es obligatoria."
@@ -71,7 +73,7 @@
                     </div>
                     <div class="form-group">
                         <asp:Label runat="server" ID="ConfirmNewPasswordLabel" AssociatedControlID="ConfirmNewPassword" CssClass="col-md-2 control-label">Confirmar la nueva contraseña</asp:Label>
-                        <div class="col-md-10">
+                        <div class="col-md-4">
                             <asp:TextBox runat="server" ID="ConfirmNewPassword" TextMode="Password" CssClass="form-control" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmNewPassword"
                                 CssClass="text-danger" Display="Dynamic" ErrorMessage="La confirmación de la nueva contraseña es obligatoria."
@@ -90,4 +92,6 @@
             </asp:PlaceHolder>
         </section>
     </div>
+</div>
+</div>
 </asp:Content>

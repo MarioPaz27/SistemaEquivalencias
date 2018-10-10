@@ -13,6 +13,33 @@ namespace SistemaEquivalencias {
     public partial class SiteMaster {
         
         /// <summary>
+        /// Control topnavAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl topnavAdmin;
+        
+        /// <summary>
+        /// Control topnavNI.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl topnavNI;
+        
+        /// <summary>
+        /// Control topnavEquiv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl topnavEquiv;
+        
+        /// <summary>
         /// Control MainContent.
         /// </summary>
         /// <remarks>

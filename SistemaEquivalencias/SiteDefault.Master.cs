@@ -13,7 +13,7 @@ using SistemaEquivalencias.Models;
 
 namespace SistemaEquivalencias
 {
-    public partial class SiteMaster : MasterPage
+    public partial class SiteDefault : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -76,13 +76,7 @@ namespace SistemaEquivalencias
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var usuario = Context.User.Identity.GetUserId();
-            if (usuario == null)
-            {
-                Response.Redirect("~/Account/login");
-            }
-            SacarMiRole(usuario);
-            CargarMenu(miPerfil);
+
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
@@ -90,52 +84,5 @@ namespace SistemaEquivalencias
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
-        protected void SacarMiRole(string idUsuario)
-        {
-            var miRole = (from rol in role.Roles select rol).ToList();
-            foreach (var losroles in miRole)
-            {
-                if (adminUsers.IsInRole(idUsuario, losroles.Name))
-                {
-                    miPerfil = losroles.Name.ToString();
-                }
-            }
-        }
-
-        protected void CargarMenu(string prmRole)
-        {
-            if (prmRole == "Administrador")
-            {
-                this.topnavAdmin.Visible = true;
-                this.topnavNI.Visible = false;
-                this.topnavEquiv.Visible = false;
-                //this.topnav.Visible = false;
-            }
-            else
-            {
-                if (prmRole == "Equivalencias")
-                {
-                    this.topnavAdmin.Visible = false;
-                    this.topnavNI.Visible = false;
-                    this.topnavEquiv.Visible = true;
-                    //this.topnav.Visible = false;
-                }
-                else if(prmRole == "NuevoIngreso")
-                {
-                    this.topnavAdmin.Visible = false;
-                    this.topnavNI.Visible = true;
-                    this.topnavEquiv.Visible = false;
-                    //this.topnav.Visible = false;
-                }
-                else
-                {
-                    this.topnavAdmin.Visible = false;
-                    this.topnavNI.Visible = false;
-                    this.topnavEquiv.Visible = false;
-                    //this.topnav.Visible = true;
-                }
-            }
-        }
     }
-
 }

@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /*
 Template Name: Education Board
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -8,13 +8,122 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Navigation CSS
 */
 
-#topnav{display:block; clear:both; width:960px; margin:0; padding:15px 0; text-align:center;}
-#topnav, #topnav a{text-transform:uppercase; color:#FFFFFF; background-color:#510000;}
-#topnav a:hover, #topnav li.active a{color:#FB0000; background-color:#510000;}
-#topnav ul, #topnav li{margin:0; padding:0; list-style:none;}
-#topnav li{display:inline; margin-right:30px;}
-#topnav li.last{margin:0;}
+/*estilo de menu de Administrador*/
 
+#topnavAdmin{display:block; clear:both; width:960px; margin:0; padding:15px 0; text-align:center;}
+#topnavAdmin, #topnav a{text-transform:uppercase; color:#FFFFFF; background-color:#510000;}
+#topnavAdmin a:hover, #topnav li.active a{color:#FB0000; background-color:#510000;}
+#topnavAdmin ul, #topnav li{margin:0; padding:0; list-style:none;}
+#topnavAdmin li{display:inline; margin-right:30px;}
+#topnavAdmin li.last{margin:0;}
+
+/*estilo de menu de Nuevo Ingreso*/
+#topnavNI {
+    display: block;
+    clear: both;
+    width: 960px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+    #topnavNI, #topnavNI a {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #510000;
+    }
+
+        #topnavNI a:hover, #topnavNI li.active a {
+            color: #FB0000;
+            background-color: #510000;
+        }
+
+        #topnavNI ul, #topnavNI li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #topnavNI li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+            #topnavNI li.last {
+                margin: 0;
+            }
+
+/*estilo de menu Equivalencias*/
+#topnavEquiv {
+    display: block;
+    clear: both;
+    width: 960px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+    #topnavEquiv, #topnavEquiv a {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #510000;
+    }
+
+        #topnavEquiv a:hover, #topnavEquiv li.active a {
+            color: #FB0000;
+            background-color: #510000;
+        }
+
+        #topnavEquiv ul, #topnavEquiv li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #topnavEquiv li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+            #topnavEquiv li.last {
+                margin: 0;
+            }
+
+/*estilo de menu por defecto*/
+#topnav {
+    display: block;
+    clear: both;
+    width: 960px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+    #topnav, #topnav a {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #510000;
+    }
+
+        #topnav a:hover, #topnav li.active a {
+            color: #FB0000;
+            background-color: #510000;
+        }
+
+        #topnav ul, #topnav li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #topnav li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+            #topnav li.last {
+                margin: 0;
+            }
 /* ----------------------------------------------Column Navigation------------------------------------- */
 
 #column .subnav{display:block; width:250px; padding:25px; background-color:#F7F7F7; margin-bottom:30px; line-height:normal;}
