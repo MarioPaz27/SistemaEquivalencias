@@ -11,18 +11,21 @@ namespace SistemaEquivalencias.Account
     public partial class Login : Page
     {
         private String roleParameter;
+        private String menu;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["parameter"] == "nuevoIngreso")
             {
                 roleParameter = "nuevoIngreso";
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Nuevo Ingreso";
+                menu = "~/ProSolicEs_NuevoIngreso/";
             }
 
             if (Request.QueryString["parameter"] == "equivalencias")
             {
                 roleParameter = "equivalencias";
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Equivalencias";
+                menu = "~/ProcEva-Otor_Equivalencias/";
             }
 
             if (Request.QueryString["parameter"] == "managerRole")
@@ -58,7 +61,7 @@ namespace SistemaEquivalencias.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        Response.Redirect(menu);
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
@@ -66,8 +69,7 @@ namespace SistemaEquivalencias.Account
                     case SignInStatus.RequiresVerification:
                         Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
                                                         Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
+                                                        RememberMe.Checked), true);
                         break;
                     case SignInStatus.Failure:
                     default:

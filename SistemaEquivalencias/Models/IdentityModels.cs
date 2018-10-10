@@ -39,6 +39,14 @@ namespace SistemaEquivalencias.Models
             return new ApplicationDbContext();
         }
     }
+
+    public class UserManager : UserManager<ApplicationUser>
+    {
+        public UserManager()
+            : base(new UserStore<ApplicationUser>(new ApplicationDbContext()))
+        {
+        }
+    }
 }
 
 #region Aplicaciones auxiliares
