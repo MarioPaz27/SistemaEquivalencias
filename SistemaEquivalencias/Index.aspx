@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteDefault.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="SistemaEquivalencias.Index" %>
+﻿<%@ Page Title="Inicio" Language="C#" MasterPageFile="~/SiteDefault.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="SistemaEquivalencias.Index" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
         <!--Cuerpo del sistema-->

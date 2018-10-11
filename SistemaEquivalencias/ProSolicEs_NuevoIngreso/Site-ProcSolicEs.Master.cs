@@ -81,12 +81,14 @@ namespace SistemaEquivalencias.ProSolicEs_NuevoIngreso
             {
                 Response.Redirect("~/Index");
             }
-            if(miPerfil != "NuevoIngreso")
-            {
-                Response.Redirect("../ErrorSesion?parameter="+miPerfil);
-            }
+            
             SacarMiRole(usuario);
             CargarMenu(miPerfil);
+
+            if (miPerfil != "NuevoIngreso")
+            {
+                Response.Redirect("../ErrorSesion?parameter=" + miPerfil + "");
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

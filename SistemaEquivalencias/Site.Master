@@ -30,7 +30,7 @@
             <div class="fl_right">
                 <p><asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <a runat="server" href="~/Account/Login?parameter=nuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=managerRole">Administrador</a>
+                            <a runat="server" href="~/Account/Login?parameter=NuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=Equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=Administrador">Administrador</a>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />

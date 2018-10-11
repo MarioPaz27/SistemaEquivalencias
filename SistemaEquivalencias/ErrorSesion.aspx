@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %>- Equivalencias</title>
+    <title>Página de Error - Equivalencias</title>
 <link rel="Stylesheet" href="Content/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
@@ -18,12 +18,6 @@
 <script type="text/javascript" src="layout/scripts/galleryviewthemes/jquery.galleryview.2.1.1.min.js"></script>
 <script type="text/javascript" src="layout/scripts/galleryviewthemes/jquery.galleryview.setup.js"></script>
 <!-- / Homepage Specific -->
-    <style type="text/css">
-        .auto-style1 {
-            padding: 15px;
-            width: 171px;
-        }
-    </style>
 </head>
 <body id="top">
     <form id="form1" runat="server">

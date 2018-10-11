@@ -11,18 +11,21 @@ namespace SistemaEquivalencias
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["parameter"] == "Administrador")
+            String rol = Request.QueryString["parameter"];
+            if (rol != "Administrador")
             {
-                Lbl_Mensaje.Text = "Acceso Denegado, su rol es Administrador e intenta iniciar " +
+                Lbl_Mensaje.Text = "Acceso Denegado, su rol es "+rol+" e intenta iniciar " +
+                    "sesion como Adminsitrador";
+            }
+            if (rol != "Equivalencias")
+            {
+                Lbl_Mensaje.Text = "Acceso Denegado, su rol es "+rol+" e intenta iniciar " +
+                    "sesion como Equivalencias";
+            }
+            if (rol != "NuevoIngreso")
+            {
+                Lbl_Mensaje.Text = "Acceso Denegado, su rol es "+rol+" e intenta iniciar " +
                     "sesion como Nuevo Ingreso";
-            }
-            if (Request.QueryString["parameter"] == "Equivalencias")
-            {
-
-            }
-            if (Request.QueryString["parameter"] == "NuevoIngreso")
-            {
-
             }
         }
 
