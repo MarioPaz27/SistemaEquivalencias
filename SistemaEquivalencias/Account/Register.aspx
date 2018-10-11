@@ -1,6 +1,7 @@
-﻿<%@ Page Title="Registrarse" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="SistemaEquivalencias.Account.Register" %>
+﻿<%@ Page Title="Registrarse" Language="C#" MasterPageFile="~/AdministradorSistema/SiteManager.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="SistemaEquivalencias.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <div id="container" class="clear"> 
     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
@@ -42,4 +43,5 @@
             </div>
         </div>
     </div>
+        </div>
 </asp:Content>

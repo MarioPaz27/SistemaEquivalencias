@@ -28,14 +28,17 @@
             <div class="fl_right">
                 <p><asp:LoginView runat="server" ViewStateMode="Disabled">
                         <LoggedInTemplate>
-                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> !</a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </p> 
             </div>
-    <div id="topnav">
+          <%--menu para Nuevo Ingreso--%>
+    <div id="topnav" runat="server">
       <ul>
-        <li><a href="Default">Home</a></li>
+        <li><a href="../Default">Home</a></li>
+        <li><a href="../Contact.aspx">Contacto</a></li>
+        <li><a href="../About.aspx">Acerca de</a></li>
       </ul>
     </div>
   </div>

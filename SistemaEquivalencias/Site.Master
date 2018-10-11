@@ -24,7 +24,7 @@
     <div class="wrapper row1">
       <div id="header" class="clear">
         <div class="fl_left">
-            <h1><a href="~/">Universidad Tecnologica</a></h1>
+            <h1><a href="../Default">Universidad Tecnologica</a></h1>
               <p>de El Salvador</p>
             </div>
             <div class="fl_right">
@@ -41,33 +41,25 @@
           <%--menu de Administrador--%>
     <div id="topnavAdmin" class="topnav" runat="server">
       <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
+        <li><a href="../AdministradorSistema/">Home</a></li>
       </ul>
     </div>
           <%--menu por defecto--%>
     <div id="topnav" class="topnav" runat="server">
       <ul>
         <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
       </ul>
     </div>
           <%--menu para Nuevo Ingreso--%>
     <div id="topnavNI" class="topnav" runat="server">
       <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
+        <li><a href="../ProSolicEs_NuevoIngreso/">Home</a></li>
       </ul>
     </div>
           <%--menu de Equivalencias--%>
     <div id="topnavEquiv" class="topnav" runat="server">
       <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
+        <li><a href="../ProcEva-Otor_Equivalencia/">Home</a></li>
       </ul>
     </div>
 

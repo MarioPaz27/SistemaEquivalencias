@@ -14,22 +14,23 @@ namespace SistemaEquivalencias.Account
         private String menu;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["parameter"] == "nuevoIngreso")
+            if (Request.QueryString["parameter"] == "NuevoIngreso")
             {
                 roleParameter = "nuevoIngreso";
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Nuevo Ingreso";
                 menu = "~/ProSolicEs_NuevoIngreso/";
             }
 
-            if (Request.QueryString["parameter"] == "equivalencias")
+            if (Request.QueryString["parameter"] == "Equivalencias")
             {
                 roleParameter = "equivalencias";
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Equivalencias";
                 menu = "~/ProcEva-Otor_Equivalencias/";
             }
 
-            if (Request.QueryString["parameter"] == "managerRole")
+            if (Request.QueryString["parameter"] == "Administrador")
             {
+                menu = "~/AdministradorSistema/";
                 roleParameter = "managerRole";
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para el Administrador";
             }

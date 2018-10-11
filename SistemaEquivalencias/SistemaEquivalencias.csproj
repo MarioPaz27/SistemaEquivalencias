@@ -52,6 +52,24 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -170,6 +188,130 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AdministradorSistema\Default.aspx" />
+    <Content Include="AdministradorSistema\images\black_file.gif" />
+    <Content Include="AdministradorSistema\images\brown_file.gif" />
+    <Content Include="AdministradorSistema\images\demo\100x70.gif" />
+    <Content Include="AdministradorSistema\images\demo\130x100.gif" />
+    <Content Include="AdministradorSistema\images\demo\130x130.gif" />
+    <Content Include="AdministradorSistema\images\demo\190x90.gif" />
+    <Content Include="AdministradorSistema\images\demo\200x80.gif" />
+    <Content Include="AdministradorSistema\images\demo\240x90.gif" />
+    <Content Include="AdministradorSistema\images\demo\300x120.gif" />
+    <Content Include="AdministradorSistema\images\demo\440x215.gif" />
+    <Content Include="AdministradorSistema\images\demo\450x320.gif" />
+    <Content Include="AdministradorSistema\images\demo\450x380.gif" />
+    <Content Include="AdministradorSistema\images\demo\60x60.gif" />
+    <Content Include="AdministradorSistema\images\demo\80x80.gif" />
+    <Content Include="AdministradorSistema\images\demo\avatar.gif" />
+    <Content Include="AdministradorSistema\images\demo\imgl.gif" />
+    <Content Include="AdministradorSistema\images\demo\imgr.gif" />
+    <Content Include="AdministradorSistema\images\demo\index.html" />
+    <Content Include="AdministradorSistema\images\demo\video.gif" />
+    <Content Include="AdministradorSistema\images\footer_bg.gif" />
+    <Content Include="AdministradorSistema\images\form_input_long.gif" />
+    <Content Include="AdministradorSistema\images\index.html" />
+    <Content Include="AdministradorSistema\images\search.gif" />
+    <Content Include="AdministradorSistema\images\shadow.gif" />
+    <Content Include="AdministradorSistema\images\social\facebook.gif" />
+    <Content Include="AdministradorSistema\images\social\flickr.gif" />
+    <Content Include="AdministradorSistema\images\social\index.html" />
+    <Content Include="AdministradorSistema\images\social\rss.gif" />
+    <Content Include="AdministradorSistema\images\social\twitter.gif" />
+    <Content Include="AdministradorSistema\images\social\youtube.gif" />
+    <Content Include="AdministradorSistema\layout\images\index.html" />
+    <Content Include="AdministradorSistema\layout\images\search.gif" />
+    <Content Include="AdministradorSistema\layout\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\jquery.easing.1.3.js" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\jquery.galleryview.2.1.1.min.js" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\jquery.galleryview.setup.js" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\jquery.timers.1.2.js" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\dark\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\dark\next.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\dark\panel-nav-next.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\dark\panel-nav-prev.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\dark\prev.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\light\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\light\next.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\light\panel-nav-next.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\light\panel-nav-prev.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\themes\light\prev.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\jquery.min.js" />
+    <Content Include="AdministradorSistema\layout\scripts\jquery.ui.min.js" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\sprite.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_rounded\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_square\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\index.html" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="AdministradorSistema\layout\scripts\prettyphoto\prettyPhoto.css" />
+    <Content Include="AdministradorSistema\layout\styles\3_column.css" />
+    <Content Include="AdministradorSistema\layout\styles\featured_slide.css" />
+    <Content Include="AdministradorSistema\layout\styles\forms.css" />
+    <Content Include="AdministradorSistema\layout\styles\gallery.css" />
+    <Content Include="AdministradorSistema\layout\styles\homepage.css" />
+    <Content Include="AdministradorSistema\layout\styles\images\black_file.gif" />
+    <Content Include="AdministradorSistema\layout\styles\images\brown_file.gif" />
+    <Content Include="AdministradorSistema\layout\styles\images\footer_bg.gif" />
+    <Content Include="AdministradorSistema\layout\styles\images\form_input_long.gif" />
+    <Content Include="AdministradorSistema\layout\styles\images\index.html" />
+    <Content Include="AdministradorSistema\layout\styles\images\shadow.gif" />
+    <Content Include="AdministradorSistema\layout\styles\index.html" />
+    <Content Include="AdministradorSistema\layout\styles\layout.css" />
+    <Content Include="AdministradorSistema\layout\styles\navi.css" />
+    <Content Include="AdministradorSistema\layout\styles\portfolio.css" />
+    <Content Include="AdministradorSistema\layout\styles\tables.css" />
+    <Content Include="AdministradorSistema\pages\3-columns.html" />
+    <Content Include="AdministradorSistema\pages\full-width.html" />
+    <Content Include="AdministradorSistema\pages\gallery.html" />
+    <Content Include="AdministradorSistema\pages\index.html" />
+    <Content Include="AdministradorSistema\pages\portfolio.html" />
+    <Content Include="AdministradorSistema\pages\style-demo.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -177,6 +319,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ErrorSesion.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -199,6 +342,7 @@
       <LastGenOutput>Equivalencias.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="AdministradorSistema\SiteManager.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -832,6 +976,20 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministradorSistema\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministradorSistema\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorSistema\SiteManager.Master.cs">
+      <DependentUpon>SiteManager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministradorSistema\SiteManager.Master.designer.cs">
+      <DependentUpon>SiteManager.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -861,6 +1019,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Equivalencias.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorSesion.aspx.cs">
+      <DependentUpon>ErrorSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorSesion.aspx.designer.cs">
+      <DependentUpon>ErrorSesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -938,8 +1103,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
-    <Folder Include="App_Data\" />
     <Folder Include="ManagerSystem\" />
   </ItemGroup>
   <ItemGroup>

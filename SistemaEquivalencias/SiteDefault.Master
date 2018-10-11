@@ -24,13 +24,13 @@
     <div class="wrapper row1">
       <div id="header" class="clear">
         <div class="fl_left">
-            <h1><a href="~/">Universidad Tecnologica</a></h1>
+            <h1><a href="../Index">Universidad Tecnologica</a></h1>
               <p>de El Salvador</p>
             </div>
             <div class="fl_right">
                 <p><asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <a runat="server" href="~/Account/Login?parameter=nuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=managerRole">Administrador</a>
+                            <a runat="server" href="~/Account/Login?parameter=NuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=Equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=Administrador">Administrador</a>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/index" OnLoggingOut="Unnamed_LoggingOut" />
