@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteDefault.master.cs" Inherits="SistemaEquivalencias.SiteDefault" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Equivalencias</title>
+<link rel="Stylesheet" href="Content/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
+<!-- Homepage Specific -->
+<script type="text/javascript" src="layout/scripts/galleryviewthemes/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="layout/scripts/galleryviewthemes/jquery.timers.1.2.js"></script>
+<script type="text/javascript" src="layout/scripts/galleryviewthemes/jquery.galleryview.2.1.1.min.js"></script>
+<script type="text/javascript" src="layout/scripts/galleryviewthemes/jquery.galleryview.setup.js"></script>
+<!-- / Homepage Specific -->
+</head>
+<body id="top">
+  <form runat="server">
+    <div class="wrapper row1">
+      <div id="header" class="clear">
+        <div class="fl_left">
+            <h1><a href="../Index">Universidad Tecnologica</a></h1>
+              <p>de El Salvador</p>
+            </div>
+            <div class="fl_right">
+                <p><asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <a runat="server" href="~/Account/Login?parameter=NuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=Equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=Administrador">Administrador</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/index" OnLoggingOut="Unnamed_LoggingOut" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </p>
+            </div>
+  </div>
+</div>
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="wrapper row3">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+          <!--Pie de pagina con informacion del sistema-->
+    <div class="wrapper row4">
+  <div id="footer" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div class="footbox">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">&raquo; Homepage</a></li>
+        <li><a href="#">&raquo; Contact Us</a></li>
+        <li><a href="#">&raquo; Sitemap</a></li>
+        <li><a href="#">&raquo; Privacy Policy</a></li>
+        <li><a href="#">&raquo; Terms of Use</a></li>
+        <li><a href="#">&raquo; Copyright Information</a></li>
+        <li><a href="#">&raquo; Website Matters</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>How To Find Us</h2>
+      <address>
+      Address Line 1<br />
+      Address Line 2<br />
+      Town/City<br />
+      Postcode/Zip<br />
+      <br />
+      Tel: xxxx xxxx xxxxxx<br />
+      Email: <a href="#">contact@domain.com</a>
+      </address>
+    </div>
+    <div class="fl_right">
+      <div id="social">
+        <h2>Connect With Us</h2>
+        <ul>
+          <li><a href="#"><img src="../images/social/facebook.gif" alt="" /></a></li>
+          <li><a href="#"><img src="../images/social/twitter.gif" alt="" /></a></li>
+          <li><a href="#"><img src="../images/social/flickr.gif" alt="" /></a></li>
+          <li><a href="#"><img src="../images/social/youtube.gif" alt="" /></a></li>
+          <li class="last"><a href="#"><img src="../images/social/rss.gif" alt="" /></a></li>
+        </ul>
+      </div>
+      <div id="newsletter" class="clear">
+          <fieldset>
+            <legend>Subscribe To Our Newsletter:</legend>
+            <asp:TextBox runat="server" ID="tbxBuesqueda" placeholder="Ingrese su E-mail aqui..." />
+            <input type="text" id="subscribe" value="Submit" />
+          </fieldset>
+      </div>
+    </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+
+      <div class="wrapper">
+                  <div id="copyright" class="clear">
+                    <p class="fl_left">&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+                  </div>
+                </div>
+    </form>
+</body>
+</html>

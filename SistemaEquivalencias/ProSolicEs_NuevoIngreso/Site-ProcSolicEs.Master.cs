@@ -7,6 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using SistemaEquivalencias.Models;
 
 namespace SistemaEquivalencias.ProSolicEs_NuevoIngreso
 {
@@ -15,6 +17,11 @@ namespace SistemaEquivalencias.ProSolicEs_NuevoIngreso
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+
+        public String miPerfil;
+
+        ApplicationDbContext role = new ApplicationDbContext();
+        UserManager adminUsers = new UserManager();
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -69,12 +76,45 @@ namespace SistemaEquivalencias.ProSolicEs_NuevoIngreso
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var usuario = Context.User.Identity.GetUserId();
+            if (usuario == null)
+            {
+                Response.Redirect("~/Index");
+            }
+            
+            SacarMiRole(usuario);
+            CargarMenu(miPerfil);
 
+            if (miPerfil != "NuevoIngreso")
+            {
+                Response.Redirect("../ErrorSesion?parameter=" + miPerfil + "");
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+        protected void SacarMiRole(string idUsuario)
+        {
+            var miRole = (from rol in role.Roles select rol).ToList();
+            foreach (var losroles in miRole)
+            {
+                if (adminUsers.IsInRole(idUsuario, losroles.Name))
+                {
+                    miPerfil = losroles.Name.ToString();
+                }
+            }
+        }
+
+        protected void CargarMenu(string prmRole)
+        {
+            if (prmRole == "NuevoIngreso")
+            {
+                //this.topnavNI.Visible = true;
+            }
+            
         }
     }
 

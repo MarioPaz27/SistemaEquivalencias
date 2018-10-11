@@ -10,17 +10,41 @@ namespace SistemaEquivalencias.Account
 {
     public partial class Login : Page
     {
+        private String roleParameter;
+        private String menu;
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
-            // Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
-            //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
+            if (Request.QueryString["parameter"] == "NuevoIngreso")
             {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+                roleParameter = "nuevoIngreso";
+                lbl_Test.Text = "Este Inicio de Sesión es únicamente para Nuevo Ingreso";
+                menu = "~/ProSolicEs_NuevoIngreso/";
             }
+
+            if (Request.QueryString["parameter"] == "Equivalencias")
+            {
+                roleParameter = "equivalencias";
+                lbl_Test.Text = "Este Inicio de Sesión es únicamente para Equivalencias";
+                menu = "~/ProcEva-Otor_Equivalencias/";
+            }
+
+            if (Request.QueryString["parameter"] == "Administrador")
+            {
+                menu = "~/AdministradorSistema/";
+                roleParameter = "managerRole";
+                lbl_Test.Text = "Este Inicio de Sesión es únicamente para el Administrador";
+            }
+
+            
+            //RegisterHyperLink.NavigateUrl = "Register";
+            //// Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
+            ////ForgotPasswordHyperLink.NavigateUrl = "Forgot";
+            //OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
+            //var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
+            //if (!String.IsNullOrEmpty(returnUrl))
+            //{
+            //    RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+            //}
         }
 
         protected void LogIn(object sender, EventArgs e)
@@ -38,7 +62,7 @@ namespace SistemaEquivalencias.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        Response.Redirect(menu);
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
@@ -46,8 +70,7 @@ namespace SistemaEquivalencias.Account
                     case SignInStatus.RequiresVerification:
                         Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
                                                         Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
+                                                        RememberMe.Checked), true);
                         break;
                     case SignInStatus.Failure:
                     default:

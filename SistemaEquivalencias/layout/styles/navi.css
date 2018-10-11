@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /*
 Template Name: Education Board
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -8,13 +8,41 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Navigation CSS
 */
 
-#topnav{display:block; clear:both; width:960px; margin:0; padding:15px 0; text-align:center;}
-#topnav, #topnav a{text-transform:uppercase; color:#FFFFFF; background-color:#510000;}
-#topnav a:hover, #topnav li.active a{color:#FB0000; background-color:#510000;}
-#topnav ul, #topnav li{margin:0; padding:0; list-style:none;}
-#topnav li{display:inline; margin-right:30px;}
-#topnav li.last{margin:0;}
+/*estilo de menu por defecto*/
+.topnav {
+    display: block;
+    clear: both;
+    width: 960px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
 
+    .topnav, .topnav a {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #510000;
+    }
+
+    .topnav a:hover, .topnav li.active a {
+    color: #FB0000;
+    background-color: #510000;
+    }
+
+    .topnav ul, .topnav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+
+    .topnav li {
+    display: inline;
+    margin-right: 30px;
+    }
+
+    .topnav li.last {
+    margin: 0;
+    }
 /* ----------------------------------------------Column Navigation------------------------------------- */
 
 #column .subnav{display:block; width:250px; padding:25px; background-color:#F7F7F7; margin-bottom:30px; line-height:normal;}

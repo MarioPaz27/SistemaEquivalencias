@@ -3,7 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
     <!--Cuerpo del sistema-->
-    <div class="wrapper row3">
   <div id="container" class="clear"> 
     <!-- ####################################################################################################### -->
 
@@ -26,57 +25,6 @@
     </ol>
     <!-- ####################################################################################################### --> 
   </div>
-</div>
 
-    <!--Pie de pagina con informacion del sistema-->
-    <div class="wrapper row4">
-  <div id="footer" class="clear"> 
-    <!-- ####################################################################################################### -->
-    <div class="footbox">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="#">&raquo; Homepage</a></li>
-        <li><a href="#">&raquo; Contact Us</a></li>
-        <li><a href="#">&raquo; Sitemap</a></li>
-        <li><a href="#">&raquo; Privacy Policy</a></li>
-        <li><a href="#">&raquo; Terms of Use</a></li>
-        <li><a href="#">&raquo; Copyright Information</a></li>
-        <li><a href="#">&raquo; Website Matters</a></li>
-      </ul>
-    </div>
-    <div class="footbox">
-      <h2>How To Find Us</h2>
-      <address>
-      Address Line 1<br />
-      Address Line 2<br />
-      Town/City<br />
-      Postcode/Zip<br />
-      <br />
-      Tel: xxxx xxxx xxxxxx<br />
-      Email: <a href="#">contact@domain.com</a>
-      </address>
-    </div>
-    <div class="fl_right">
-      <div id="social">
-        <h2>Connect With Us</h2>
-        <ul>
-          <li><a href="#"><img src="../images/social/facebook.gif" alt="" /></a></li>
-          <li><a href="#"><img src="../images/social/twitter.gif" alt="" /></a></li>
-          <li><a href="#"><img src="../images/social/flickr.gif" alt="" /></a></li>
-          <li><a href="#"><img src="../images/social/youtube.gif" alt="" /></a></li>
-          <li class="last"><a href="#"><img src="../images/social/rss.gif" alt="" /></a></li>
-        </ul>
-      </div>
-      <div id="newsletter" class="clear">
-          <fieldset>
-            <legend>Subscribe To Our Newsletter:</legend>
-            <asp:TextBox runat="server" ID="tbxBuesqueda" placeholder="Ingrese su E-mail aqui..." />
-            <input type="text" id="subscribe" value="Submit" />
-          </fieldset>
-      </div>
-    </div>
-    <!-- ####################################################################################################### --> 
-  </div>
-</div>
 
 </asp:Content>

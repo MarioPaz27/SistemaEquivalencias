@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Equivalencias">
+  <DataContextMoniker Name="/EquivalenciasDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8d8a0e77-3ece-44ec-be4e-8d0e64086d4c" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/EquivalenciasDataContext/AspNetRoles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc259ba8-03fd-47b8-8a65-0cd381252d5d" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5989f6d-7c75-4e61-8855-af8a4397864e" absoluteBounds="3.5, 6.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EquivalenciasDataContext/AspNetUserClaims" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad64a99a-169d-4de4-910c-759304c97462" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44270bfc-9e5c-4ecd-8fe3-e36b855a12bf" absoluteBounds="3.5, 4.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/EquivalenciasDataContext/AspNetUserLogins" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2468f194-ddb7-4581-b637-83aa2ced19b6" absoluteBounds="3.515, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb773027-4447-49bf-bf16-7911aac0219e" absoluteBounds="3.5, 1.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/EquivalenciasDataContext/AspNetUserRoles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="267c4557-d398-4cf4-95c8-4a851fa59114" absoluteBounds="3.515, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9fb6d381-f61e-4119-9a6a-140096ea11e8" absoluteBounds="0.75, 2.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EquivalenciasDataContext/AspNetUsers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a909229f-6870-4f5a-ba60-222562a63aa7" absoluteBounds="0.765, 3.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 1.94399251302083); (1.75 : 2.34699625651042); (3.5 : 2.34699625651042)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EquivalenciasDataContext/AspNetRoles/AspNetRoles_AspNetUserRoles" />
+      <nodes>
+        <classShapeMoniker Id="8d8a0e77-3ece-44ec-be4e-8d0e64086d4c" />
+        <classShapeMoniker Id="cb773027-4447-49bf-bf16-7911aac0219e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.8670068359375); (1.75 : 7.41429768880208); (3.5 : 7.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EquivalenciasDataContext/AspNetUsers/AspNetUsers_AspNetUserClaims" />
+      <nodes>
+        <classShapeMoniker Id="9fb6d381-f61e-4119-9a6a-140096ea11e8" />
+        <classShapeMoniker Id="c5989f6d-7c75-4e61-8855-af8a4397864e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.06814697265625); (3.5 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EquivalenciasDataContext/AspNetUsers/AspNetUsers_AspNetUserLogins" />
+      <nodes>
+        <classShapeMoniker Id="9fb6d381-f61e-4119-9a6a-140096ea11e8" />
+        <classShapeMoniker Id="44270bfc-9e5c-4ecd-8fe3-e36b855a12bf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.75); (3.125 : 2.375); (3.125 : 3.31899251302083); (3.5 : 2.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EquivalenciasDataContext/AspNetUsers/AspNetUsers_AspNetUserRoles" />
+      <nodes>
+        <classShapeMoniker Id="9fb6d381-f61e-4119-9a6a-140096ea11e8" />
+        <classShapeMoniker Id="cb773027-4447-49bf-bf16-7911aac0219e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

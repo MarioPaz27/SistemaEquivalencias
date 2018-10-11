@@ -8,6 +8,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Equivalencias</title>
+<link rel="Stylesheet" href="Content/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
@@ -23,27 +24,45 @@
     <div class="wrapper row1">
       <div id="header" class="clear">
         <div class="fl_left">
-            <h1><a href="~/">Universidad Tecnologica</a></h1>
+            <h1><a href="../Default">Universidad Tecnologica</a></h1>
               <p>de El Salvador</p>
             </div>
             <div class="fl_right">
                 <p><asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <a runat="server" href="~/ProSolicEs_NuevoIngreso/">Nuevo Ingreso</a> | <a runat="server" href="~/ProcEva-Otor_Equivalencia/">Equivalencias</a> | <a runat="server" href="~/Account/Login">Administrador</a>
+                            <a runat="server" href="~/Account/Login?parameter=NuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=Equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=Administrador">Administrador</a>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> !</a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </p>
             </div>
-    <div id="topnav">
+          <%--menu de Administrador--%>
+    <div id="topnavAdmin" class="topnav" runat="server">
       <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
+        <li><a href="../AdministradorSistema/">Home</a></li>
       </ul>
     </div>
+          <%--menu por defecto--%>
+    <div id="topnav" class="topnav" runat="server">
+      <ul>
+        <li><a href="../Default">Home</a></li>
+      </ul>
+    </div>
+          <%--menu para Nuevo Ingreso--%>
+    <div id="topnavNI" class="topnav" runat="server">
+      <ul>
+        <li><a href="../ProSolicEs_NuevoIngreso/">Home</a></li>
+      </ul>
+    </div>
+          <%--menu de Equivalencias--%>
+    <div id="topnavEquiv" class="topnav" runat="server">
+      <ul>
+        <li><a href="../ProcEva-Otor_Equivalencia/">Home</a></li>
+      </ul>
+    </div>
+
   </div>
 </div>
         <asp:ScriptManager runat="server">
@@ -65,15 +84,66 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        <div>
+        <div class="wrapper row3">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-                <div class="wrapper">
+        </div>
+          <!--Pie de pagina con informacion del sistema-->
+    <div class="wrapper row4">
+  <div id="footer" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div class="footbox">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">&raquo; Homepage</a></li>
+        <li><a href="#">&raquo; Contact Us</a></li>
+        <li><a href="#">&raquo; Sitemap</a></li>
+        <li><a href="#">&raquo; Privacy Policy</a></li>
+        <li><a href="#">&raquo; Terms of Use</a></li>
+        <li><a href="#">&raquo; Copyright Information</a></li>
+        <li><a href="#">&raquo; Website Matters</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>How To Find Us</h2>
+      <address>
+      Address Line 1<br />
+      Address Line 2<br />
+      Town/City<br />
+      Postcode/Zip<br />
+      <br />
+      Tel: xxxx xxxx xxxxxx<br />
+      Email: <a href="#">contact@domain.com</a>
+      </address>
+    </div>
+    <div class="fl_right">
+      <div id="social">
+        <h2>Connect With Us</h2>
+        <ul>
+          <li><a href="#"><img src="../images/social/facebook.gif" alt="" /></a></li>
+          <li><a href="#"><img src="../images/social/twitter.gif" alt="" /></a></li>
+          <li><a href="#"><img src="../images/social/flickr.gif" alt="" /></a></li>
+          <li><a href="#"><img src="../images/social/youtube.gif" alt="" /></a></li>
+          <li class="last"><a href="#"><img src="../images/social/rss.gif" alt="" /></a></li>
+        </ul>
+      </div>
+      <div id="newsletter" class="clear">
+          <fieldset>
+            <legend>Subscribe To Our Newsletter:</legend>
+            <asp:TextBox runat="server" ID="tbxBuesqueda" placeholder="Ingrese su E-mail aqui..." />
+            <input type="text" id="subscribe" value="Submit" />
+          </fieldset>
+      </div>
+    </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+
+      <div class="wrapper">
                   <div id="copyright" class="clear">
                     <p class="fl_left">&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
                   </div>
                 </div>
-        </div>
     </form>
 </body>
 </html>

@@ -7,27 +7,27 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SistemaEquivalencias.ProcInsercion_Equivalencia {
+namespace SistemaEquivalencias {
     
     
-    public partial class Site {
+    public partial class SiteDefault {
         
         /// <summary>
-        /// Control head.
+        /// Control MainContent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
         
         /// <summary>
-        /// Control ContentMain.
+        /// Control tbxBuesqueda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentMain;
+        protected global::System.Web.UI.WebControls.TextBox tbxBuesqueda;
     }
 }
