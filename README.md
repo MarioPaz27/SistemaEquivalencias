@@ -1,0 +1,2 @@
+# SistemaEquivalencias
+Sincronizacion de aplicacion
