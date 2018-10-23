@@ -32,9 +32,9 @@
                         <AnonymousTemplate>
                             <a runat="server" href="~/Account/Login?parameter=NuevoIngreso">Nuevo Ingreso</a> | <a runat="server" href="~/Account/Login?parameter=Equivalencias">Equivalencias</a> | <a runat="server" href="~/Account/Login?parameter=Administrador">Administrador</a>
                         </AnonymousTemplate>
-                        <LoggedInTemplate>
+                        <%--<LoggedInTemplate>
                             <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/index" OnLoggingOut="Unnamed_LoggingOut" />
-                        </LoggedInTemplate>
+                        </LoggedInTemplate>--%>
                     </asp:LoginView>
                 </p>
             </div>

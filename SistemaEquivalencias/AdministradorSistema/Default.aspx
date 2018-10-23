@@ -4,7 +4,7 @@
         <!-- ####################################################################################################### -->
 
         <h1><%: Page.Title %></h1>
-        <p>PAGINA DE INICIO DE NUEVO INGRESO</p>
+        <p>PAGINA DE INICIO DE ADMINISTRADOR</p>
     
     </div>
 </asp:Content>

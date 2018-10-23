@@ -79,8 +79,14 @@ namespace SistemaEquivalencias.AdministradorSistema
             {
                 Response.Redirect("~/Index");
             }
+
             SacarMiRole(usuario);
             CargarMenu(miPerfil);
+
+            if (miPerfil != "Administrador")
+            {
+                Response.Redirect("../ErrorSesion?parameter=" + miPerfil + "");
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

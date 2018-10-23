@@ -9,6 +9,7 @@
     <title><%: Page.Title %> - Equivalencias</title>
 <link rel="Stylesheet" href="../Content/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<link rel="stylesheet" href="../fontello/css/fontello.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
 <!-- Homepage Specific -->
