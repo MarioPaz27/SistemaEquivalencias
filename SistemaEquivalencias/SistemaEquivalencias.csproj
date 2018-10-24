@@ -364,7 +364,6 @@
     <Content Include="fontello\font\fontello.woff" />
     <Content Include="fontello\font\fontello.woff2" />
     <Content Include="libman.json" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
