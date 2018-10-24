@@ -16,7 +16,7 @@ namespace SistemaEquivalencias.AdministradorSistema
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
 
-        public String miPerfil;
+        public String miPerfil; 
 
         ApplicationDbContext role = new ApplicationDbContext();
         UserManager adminUsers = new UserManager();

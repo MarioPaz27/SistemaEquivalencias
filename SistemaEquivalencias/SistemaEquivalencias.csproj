@@ -51,6 +51,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -312,6 +314,8 @@
     <Content Include="AdministradorSistema\pages\index.html" />
     <Content Include="AdministradorSistema\pages\portfolio.html" />
     <Content Include="AdministradorSistema\pages\style-demo.html" />
+    <Content Include="AdministradorSistema\RolesUsuarios.aspx" />
+    <Content Include="AdministradorSistema\VerUsuarios.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -359,6 +363,8 @@
     <Content Include="fontello\font\fontello.ttf" />
     <Content Include="fontello\font\fontello.woff" />
     <Content Include="fontello\font\fontello.woff2" />
+    <Content Include="libman.json" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1001,12 +1007,27 @@
     <Compile Include="AdministradorSistema\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministradorSistema\RolesUsuarios.aspx.cs">
+      <DependentUpon>RolesUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministradorSistema\RolesUsuarios.aspx.designer.cs">
+      <DependentUpon>RolesUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministradorSistema\SiteManager.Master.cs">
       <DependentUpon>SiteManager.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdministradorSistema\SiteManager.Master.designer.cs">
       <DependentUpon>SiteManager.Master</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\ValidacionPensum.cs" />
+    <Compile Include="AdministradorSistema\VerUsuarios.aspx.cs">
+      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministradorSistema\VerUsuarios.aspx.designer.cs">
+      <DependentUpon>VerUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -1137,6 +1158,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Equivalencias.dbml.layout">

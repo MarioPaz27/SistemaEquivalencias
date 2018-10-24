@@ -21,15 +21,15 @@
                 <dl class="dl-horizontal">
                     <dt>Contraseña:</dt>
                     <dd>
-                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />
+                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="Cambiar" Visible="false" ID="ChangePassword" runat="server" />
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Create]" Visible="false" ID="CreatePassword" runat="server" />
                     </dd>
-                    <dt>Inicios de sesión externos:</dt>
+                    <%--<dt>Inicios de sesión externos:</dt>
                     <dd><%: LoginsCount %>
                         <asp:HyperLink NavigateUrl="/Account/ManageLogins" Text="[Manage]" runat="server" />
 
                     </dd>
-                    <%--
+                    
                         Phone Numbers can used as a second factor of verification in a two-factor authentication system.
                         See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
                         for details on setting up this ASP.NET application to support two-factor authentication using SMS.
@@ -53,7 +53,7 @@
                     <% } %>
                     --%>
 
-                    <dt>Autenticación de dos factores:</dt>
+                    <%--<dt>Autenticación de dos factores:</dt>
                     <dd>
                         <p>
                             No hay ningún proveedor de autenticación en dos fases configurado. Consulte <a href="https://go.microsoft.com/fwlink/?LinkId=403804">este artículo</a>
@@ -61,19 +61,19 @@
                         </p>
                         <% if (TwoFactorEnabled)
                           { %> 
-                        <%--
+                        
                         Enabled
                         <asp:LinkButton Text="[Disable]" runat="server" CommandArgument="false" OnClick="TwoFactorDisable_Click" />
-                        --%>
+                        >
                         <% }
                           else
-                          { %> 
+                          { %> --%
                         <%--
                         Disabled
                         <asp:LinkButton Text="[Enable]" CommandArgument="true" OnClick="TwoFactorEnable_Click" runat="server" />
-                        --%>
+                        
                         <% } %>
-                    </dd>
+                    </dd>--%>
                 </dl>
             </div>
         </div>

@@ -16,18 +16,18 @@ namespace SistemaEquivalencias.Account
             if (Request.QueryString["parameter"] == "NuevoIngreso")
             {
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Nuevo Ingreso";
-                menu = "~/ProSolicEs_NuevoIngreso/";
+                menu = "~/ProSolicEs_NuevoIngreso/Default";
             }
 
             if (Request.QueryString["parameter"] == "Equivalencias")
             {
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Equivalencias";
-                menu = "~/ProcEva-Otor_Equivalencias/";
+                menu = "~/ProcEva-Otor_Equivalencias/Default";
             }
 
             if (Request.QueryString["parameter"] == "Administrador")
             {
-                menu = "~/AdministradorSistema/";
+                menu = "~/AdministradorSistema/Default";
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para el Administrador";
             }
 

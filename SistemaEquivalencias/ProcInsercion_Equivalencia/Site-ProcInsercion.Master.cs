@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SistemaEquivalencias
+namespace SistemaEquivalencias.ProcInsercion_Equivalencia
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Site : System.Web.UI.MasterPage
     {
-        protected void Page_Load(object sender, LoginCancelEventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
