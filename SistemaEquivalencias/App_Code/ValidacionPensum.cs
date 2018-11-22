@@ -53,10 +53,6 @@ namespace SistemaEquivalencias.App_Code
             {
                 result = true;
             }
-            else
-            {
-                result = false;
-            }
 
             return result;
         }

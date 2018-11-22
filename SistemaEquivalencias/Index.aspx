@@ -6,7 +6,7 @@
     <!-- ####################################################################################################### -->
 
     <h1><%: Page.Title %></h1>
-    <img src="images/institucional/logo_utec.png" class="img-responsive">
+    <img alt="Logo de la Universidad" title="Logo de la Unviersidad" src="images/institucional/logo_utec.png" class="img-responsive" />
     <!-- ####################################################################################################### --> 
   </div>
 </asp:Content>

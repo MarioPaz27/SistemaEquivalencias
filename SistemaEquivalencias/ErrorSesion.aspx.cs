@@ -33,15 +33,15 @@ namespace SistemaEquivalencias
         {
             if (Request.QueryString["parameter"] == "Administrador")
             {
-                Response.Redirect("~/AdministradorSistema/");
+                Response.Redirect("~/AdministradorSistema/Default");
             }
             if (Request.QueryString["parameter"] == "Equivalencias")
             {
-                Response.Redirect("~/AdministradorSistema/");
+                Response.Redirect("~/ProcEva-Otor_Equivalencia/Default");
             }
             if (Request.QueryString["parameter"] == "NuevoIngreso")
             {
-                Response.Redirect("~/AdministradorSistema/");
+                Response.Redirect("~/ProSolicEs_NuevoIngreso/Default");
             }
         }
     }

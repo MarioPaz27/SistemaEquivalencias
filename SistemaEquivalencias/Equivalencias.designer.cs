@@ -45,10 +45,13 @@ namespace SistemaEquivalencias
     partial void InsertAspNetUsers(AspNetUsers instance);
     partial void UpdateAspNetUsers(AspNetUsers instance);
     partial void DeleteAspNetUsers(AspNetUsers instance);
+    partial void InsertEquiv_Facultad(Equiv_Facultad instance);
+    partial void UpdateEquiv_Facultad(Equiv_Facultad instance);
+    partial void DeleteEquiv_Facultad(Equiv_Facultad instance);
     #endregion
 		
 		public EquivalenciasDataContext() : 
-				base(global::SistemaEquivalencias.Properties.Settings.Default.dbequivalConnectionString, mappingSource)
+				base(global::SistemaEquivalencias.Properties.Settings.Default.dbequivalConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -115,6 +118,21 @@ namespace SistemaEquivalencias
 			{
 				return this.GetTable<AspNetUsers>();
 			}
+		}
+		
+		public System.Data.Linq.Table<Equiv_Facultad> Equiv_Facultad
+		{
+			get
+			{
+				return this.GetTable<Equiv_Facultad>();
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_InsertarFacultad")]
+		public int sp_InsertarFacultad([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(80)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -1133,6 +1151,140 @@ namespace SistemaEquivalencias
 		{
 			this.SendPropertyChanging();
 			entity.AspNetUsers = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Equiv_Facultad")]
+	public partial class Equiv_Facultad : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdFacultad;
+		
+		private string _NombreFacultad;
+		
+		private System.Nullable<System.DateTime> _FechaRegistro;
+		
+		private System.Nullable<System.DateTime> _FechaModificacion;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdFacultadChanging(int value);
+    partial void OnIdFacultadChanged();
+    partial void OnNombreFacultadChanging(string value);
+    partial void OnNombreFacultadChanged();
+    partial void OnFechaRegistroChanging(System.Nullable<System.DateTime> value);
+    partial void OnFechaRegistroChanged();
+    partial void OnFechaModificacionChanging(System.Nullable<System.DateTime> value);
+    partial void OnFechaModificacionChanged();
+    #endregion
+		
+		public Equiv_Facultad()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdFacultad", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdFacultad
+		{
+			get
+			{
+				return this._IdFacultad;
+			}
+			set
+			{
+				if ((this._IdFacultad != value))
+				{
+					this.OnIdFacultadChanging(value);
+					this.SendPropertyChanging();
+					this._IdFacultad = value;
+					this.SendPropertyChanged("IdFacultad");
+					this.OnIdFacultadChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreFacultad", DbType="NVarChar(80) NOT NULL", CanBeNull=false)]
+		public string NombreFacultad
+		{
+			get
+			{
+				return this._NombreFacultad;
+			}
+			set
+			{
+				if ((this._NombreFacultad != value))
+				{
+					this.OnNombreFacultadChanging(value);
+					this.SendPropertyChanging();
+					this._NombreFacultad = value;
+					this.SendPropertyChanged("NombreFacultad");
+					this.OnNombreFacultadChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaRegistro", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FechaRegistro
+		{
+			get
+			{
+				return this._FechaRegistro;
+			}
+			set
+			{
+				if ((this._FechaRegistro != value))
+				{
+					this.OnFechaRegistroChanging(value);
+					this.SendPropertyChanging();
+					this._FechaRegistro = value;
+					this.SendPropertyChanged("FechaRegistro");
+					this.OnFechaRegistroChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaModificacion", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FechaModificacion
+		{
+			get
+			{
+				return this._FechaModificacion;
+			}
+			set
+			{
+				if ((this._FechaModificacion != value))
+				{
+					this.OnFechaModificacionChanging(value);
+					this.SendPropertyChanging();
+					this._FechaModificacion = value;
+					this.SendPropertyChanged("FechaModificacion");
+					this.OnFechaModificacionChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

@@ -32,5 +32,16 @@ namespace SistemaEquivalencias.Properties {
                 return ((string)(this["dbequivalConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=dbequival;Integrated Security=False;User ID" +
+            "=eau;Password=tecnologica2018")]
+        public string dbequivalConnectionString1 {
+            get {
+                return ((string)(this["dbequivalConnectionString1"]));
+            }
+        }
     }
 }

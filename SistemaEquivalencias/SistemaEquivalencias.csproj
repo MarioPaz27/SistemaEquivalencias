@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -72,7 +80,6 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -104,6 +111,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -191,6 +200,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AdministradorSistema\Default.aspx" />
+    <Content Include="AdministradorSistema\FacultadForm.aspx" />
     <Content Include="AdministradorSistema\images\black_file.gif" />
     <Content Include="AdministradorSistema\images\brown_file.gif" />
     <Content Include="AdministradorSistema\images\demo\100x70.gif" />
@@ -223,7 +233,6 @@
     <Content Include="AdministradorSistema\images\social\youtube.gif" />
     <Content Include="AdministradorSistema\layout\images\index.html" />
     <Content Include="AdministradorSistema\layout\images\search.gif" />
-    <Content Include="AdministradorSistema\layout\index.html" />
     <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\index.html" />
     <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\jquery.easing.1.3.js" />
     <Content Include="AdministradorSistema\layout\scripts\galleryviewthemes\jquery.galleryview.2.1.1.min.js" />
@@ -308,12 +317,6 @@
     <Content Include="AdministradorSistema\layout\styles\navi.css" />
     <Content Include="AdministradorSistema\layout\styles\portfolio.css" />
     <Content Include="AdministradorSistema\layout\styles\tables.css" />
-    <Content Include="AdministradorSistema\pages\3-columns.html" />
-    <Content Include="AdministradorSistema\pages\full-width.html" />
-    <Content Include="AdministradorSistema\pages\gallery.html" />
-    <Content Include="AdministradorSistema\pages\index.html" />
-    <Content Include="AdministradorSistema\pages\portfolio.html" />
-    <Content Include="AdministradorSistema\pages\style-demo.html" />
     <Content Include="AdministradorSistema\RolesUsuarios.aspx" />
     <Content Include="AdministradorSistema\VerUsuarios.aspx" />
     <Content Include="Contact.aspx" />
@@ -323,6 +326,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ErrorPageConnection.html" />
     <Content Include="ErrorSesion.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fontello\css\animation.css" />
@@ -346,11 +350,15 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="images\institucional\Attention_Sign.svg.png" />
     <Content Include="images\institucional\logo_utec.png" />
     <Content Include="Index.aspx" />
     <Content Include="ProcEva-Otor_Equivalencia\Default.aspx" />
+    <Content Include="ProcEva-Otor_Equivalencia\InsertarMateriasExternasXCarrera.aspx" />
     <Content Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master" />
     <Content Include="ProSolicEs_NuevoIngreso\Default.aspx" />
+    <Content Include="ProSolicEs_NuevoIngreso\FormularioAlumnoExterno.aspx" />
+    <Content Include="ProSolicEs_NuevoIngreso\FormularioAlumnoInterno.aspx" />
     <Content Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master" />
     <Content Include="Equivalencias.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -364,6 +372,7 @@
     <Content Include="fontello\font\fontello.woff" />
     <Content Include="fontello\font\fontello.woff2" />
     <Content Include="libman.json" />
+    <None Include="Properties\PublishProfiles\Equivalencias.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -516,7 +525,6 @@
     <Content Include="ProcEva-Otor_Equivalencia\images\social\rss.gif" />
     <Content Include="ProcEva-Otor_Equivalencia\images\social\twitter.gif" />
     <Content Include="ProcEva-Otor_Equivalencia\images\social\youtube.gif" />
-    <Content Include="ProcEva-Otor_Equivalencia\index.html" />
     <Content Include="ProcEva-Otor_Equivalencia\layout\images\index.html" />
     <Content Include="ProcEva-Otor_Equivalencia\layout\images\search.gif" />
     <Content Include="ProcEva-Otor_Equivalencia\layout\index.html" />
@@ -604,12 +612,6 @@
     <Content Include="ProcEva-Otor_Equivalencia\layout\styles\navi.css" />
     <Content Include="ProcEva-Otor_Equivalencia\layout\styles\portfolio.css" />
     <Content Include="ProcEva-Otor_Equivalencia\layout\styles\tables.css" />
-    <Content Include="ProcEva-Otor_Equivalencia\pages\3-columns.html" />
-    <Content Include="ProcEva-Otor_Equivalencia\pages\full-width.html" />
-    <Content Include="ProcEva-Otor_Equivalencia\pages\gallery.html" />
-    <Content Include="ProcEva-Otor_Equivalencia\pages\index.html" />
-    <Content Include="ProcEva-Otor_Equivalencia\pages\portfolio.html" />
-    <Content Include="ProcEva-Otor_Equivalencia\pages\style-demo.html" />
     <Content Include="ProcInsercion_Equivalencia\images\black_file.gif" />
     <Content Include="ProcInsercion_Equivalencia\images\brown_file.gif" />
     <Content Include="ProcInsercion_Equivalencia\images\demo\100x70.gif" />
@@ -851,12 +853,6 @@
     <Content Include="ProSolicEs_NuevoIngreso\layout\styles\navi.css" />
     <Content Include="ProSolicEs_NuevoIngreso\layout\styles\portfolio.css" />
     <Content Include="ProSolicEs_NuevoIngreso\layout\styles\tables.css" />
-    <Content Include="ProSolicEs_NuevoIngreso\pages\3-columns.html" />
-    <Content Include="ProSolicEs_NuevoIngreso\pages\full-width.html" />
-    <Content Include="ProSolicEs_NuevoIngreso\pages\gallery.html" />
-    <Content Include="ProSolicEs_NuevoIngreso\pages\index.html" />
-    <Content Include="ProSolicEs_NuevoIngreso\pages\portfolio.html" />
-    <Content Include="ProSolicEs_NuevoIngreso\pages\style-demo.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -1006,6 +1002,13 @@
     <Compile Include="AdministradorSistema\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministradorSistema\FacultadForm.aspx.cs">
+      <DependentUpon>FacultadForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministradorSistema\FacultadForm.aspx.designer.cs">
+      <DependentUpon>FacultadForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministradorSistema\RolesUsuarios.aspx.cs">
       <DependentUpon>RolesUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1013,6 +1016,7 @@
     <Compile Include="AdministradorSistema\RolesUsuarios.aspx.designer.cs">
       <DependentUpon>RolesUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministradorSistema\Servicios\FacultadService.cs" />
     <Compile Include="AdministradorSistema\SiteManager.Master.cs">
       <DependentUpon>SiteManager.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1075,6 +1079,10 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClaseAlumnoExterno.cs" />
+    <Compile Include="Models\ClaseAlumnoInterno.cs" />
+    <Compile Include="Models\EscuelaModels.cs" />
+    <Compile Include="Models\FacultadModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="ProcEva-Otor_Equivalencia\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1082,6 +1090,13 @@
     </Compile>
     <Compile Include="ProcEva-Otor_Equivalencia\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcEva-Otor_Equivalencia\InsertarMateriasExternasXCarrera.aspx.cs">
+      <DependentUpon>InsertarMateriasExternasXCarrera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcEva-Otor_Equivalencia\InsertarMateriasExternasXCarrera.aspx.designer.cs">
+      <DependentUpon>InsertarMateriasExternasXCarrera.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcEva-Otor_Equivalencia\Site-ProcEva-Otor.Master.cs">
       <DependentUpon>Site-ProcEva-Otor.Master</DependentUpon>
@@ -1103,6 +1118,20 @@
     <Compile Include="ProSolicEs_NuevoIngreso\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\FormularioAlumnoExterno.aspx.cs">
+      <DependentUpon>FormularioAlumnoExterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\FormularioAlumnoExterno.aspx.designer.cs">
+      <DependentUpon>FormularioAlumnoExterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\FormularioAlumnoInterno.aspx.cs">
+      <DependentUpon>FormularioAlumnoInterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProSolicEs_NuevoIngreso\FormularioAlumnoInterno.aspx.designer.cs">
+      <DependentUpon>FormularioAlumnoInterno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master.cs">
       <DependentUpon>Site-ProcSolicEs.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1110,6 +1139,7 @@
     <Compile Include="ProSolicEs_NuevoIngreso\Site-ProcSolicEs.Master.designer.cs">
       <DependentUpon>Site-ProcSolicEs.Master</DependentUpon>
     </Compile>
+    <Compile Include="Sevices\EmailServiceNotification.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1141,7 +1171,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AdministradorSistema\Procesos\" />
+    <Folder Include="AdministradorSistema\Reportes\" />
     <Folder Include="ManagerSystem\" />
+    <Folder Include="ProcEva-Otor_Equivalencia\Servicios\" />
+    <Folder Include="ProSolicEs_NuevoIngreso\pages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -1158,11 +1192,15 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Equivalencias.dbml.layout">
       <DependentUpon>Equivalencias.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

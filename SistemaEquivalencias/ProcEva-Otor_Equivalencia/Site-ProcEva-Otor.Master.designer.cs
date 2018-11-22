@@ -13,13 +13,13 @@ namespace SistemaEquivalencias.ProcEva_Otor_Equivalencia {
     public partial class Site {
         
         /// <summary>
-        /// Control head.
+        /// Control topnav.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl topnav;
         
         /// <summary>
         /// Control ContentMain.

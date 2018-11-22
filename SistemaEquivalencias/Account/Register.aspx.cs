@@ -26,7 +26,9 @@ namespace SistemaEquivalencias.Account
 
                 //signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
                 //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+
                 Pnl_Confirmacion.Visible = true;
+                Pnl_FormRegister.Visible = false;
 
             }
             else 
@@ -37,7 +39,7 @@ namespace SistemaEquivalencias.Account
 
         protected void Btn_OKSuccess_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Index");
+            Response.Redirect("../AdministradorSistema/");
         }
     }
 }

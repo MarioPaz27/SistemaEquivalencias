@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbequival" Class="EquivalenciasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=dbequival;Integrated Security=True" SettingsObjectName="SistemaEquivalencias.Properties.Settings" SettingsPropertyName="dbequivalConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=dbequival;Integrated Security=False;User ID=eau" SettingsObjectName="SistemaEquivalencias.Properties.Settings" SettingsPropertyName="dbequivalConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AspNetRoles" Member="AspNetRoles">
     <Type Name="AspNetRoles">
       <Column Name="Id" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -51,4 +51,16 @@
       <Association Name="AspNetUsers_AspNetUserRoles" Member="AspNetUserRoles" ThisKey="Id" OtherKey="UserId" Type="AspNetUserRoles" />
     </Type>
   </Table>
+  <Table Name="dbo.Equiv_Facultad" Member="Equiv_Facultad">
+    <Type Name="Equiv_Facultad">
+      <Column Name="IdFacultad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreFacultad" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_InsertarFacultad" Method="sp_InsertarFacultad">
+    <Parameter Name="nombre" Type="System.String" DbType="NVarChar(80)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

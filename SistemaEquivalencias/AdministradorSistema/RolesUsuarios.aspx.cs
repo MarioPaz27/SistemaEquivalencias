@@ -22,6 +22,7 @@ namespace SistemaEquivalencias.AdministradorSistema
         public void Page_Load()
         {
             Msg.Text = "";
+            Lbl_Mensaje1.Text = "";
             if (!IsPostBack)
             {
                 //llenar el listbox de Roles
@@ -93,6 +94,7 @@ namespace SistemaEquivalencias.AdministradorSistema
             var idUser = (from u in RolesBD.Users where u.UserName.Equals(nombreUser) select u).FirstOrDefault();
             adminUsers.RemoveFromRole(idUser.Id, ListBoxRoles.SelectedValue.ToString());
             Lbl_Mensaje1.Text = "Usuario " + nombreUser + " removido con exito del Nivel " + ListBoxRoles.SelectedValue.ToString();
+
             CargarRolesUsuarios();
         }
 

@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SistemaEquivalencias.ProcEva_Otor_Equivalencia.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ProcEva-Otor_Equivalencia/Site-ProcEva-Otor.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SistemaEquivalencias.ProcEva_Otor_Equivalencia.Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentMain" runat="server">
  <div class="wrapper row3">
   <div id="container" class="clear"> 
     <!-- ####################################################################################################### -->
@@ -22,57 +22,6 @@
       <li>Donec et dui dolor, in lacinia leo.</li>
       <li>Mauris posuere tellus ac purus adipiscing dapibus.</li>
     </ol>
-    <!-- ####################################################################################################### --> 
-  </div>
-</div>
-
-    <!--Pie de pagina con informacion del sistema-->
-    <div class="wrapper row4">
-  <div id="footer" class="clear"> 
-    <!-- ####################################################################################################### -->
-    <div class="footbox">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="#">&raquo; Homepage</a></li>
-        <li><a href="#">&raquo; Contact Us</a></li>
-        <li><a href="#">&raquo; Sitemap</a></li>
-        <li><a href="#">&raquo; Privacy Policy</a></li>
-        <li><a href="#">&raquo; Terms of Use</a></li>
-        <li><a href="#">&raquo; Copyright Information</a></li>
-        <li><a href="#">&raquo; Website Matters</a></li>
-      </ul>
-    </div>
-    <div class="footbox">
-      <h2>How To Find Us</h2>
-      <address>
-      Address Line 1<br />
-      Address Line 2<br />
-      Town/City<br />
-      Postcode/Zip<br />
-      <br />
-      Tel: xxxx xxxx xxxxxx<br />
-      Email: <a href="#">contact@domain.com</a>
-      </address>
-    </div>
-    <div class="fl_right">
-      <div id="social">
-        <h2>Connect With Us</h2>
-        <ul>
-          <li><a href="#"><img src="../images/social/facebook.gif" alt="" /></a></li>
-          <li><a href="#"><img src="../images/social/twitter.gif" alt="" /></a></li>
-          <li><a href="#"><img src="../images/social/flickr.gif" alt="" /></a></li>
-          <li><a href="#"><img src="../images/social/youtube.gif" alt="" /></a></li>
-          <li class="last"><a href="#"><img src="../images/social/rss.gif" alt="" /></a></li>
-        </ul>
-      </div>
-      <div id="newsletter" class="clear">
-          <fieldset>
-            <legend>Subscribe To Our Newsletter:</legend>
-            <asp:TextBox runat="server" ID="tbxBuesqueda" placeholder="Ingrese su E-mail aqui..." />
-            <input type="text" id="subscribe" value="Submit" />
-          </fieldset>
-      </div>
-    </div>
     <!-- ####################################################################################################### --> 
   </div>
 </div>

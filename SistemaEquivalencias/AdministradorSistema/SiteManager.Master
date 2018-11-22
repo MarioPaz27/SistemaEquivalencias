@@ -30,7 +30,7 @@
             <div class="fl_right">
                 <p><asp:LoginView runat="server" ViewStateMode="Disabled">
                         <LoggedInTemplate>
-                            <a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> | <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            <a runat="server" href="~/Account/Manage" title="Administrar tu cuenta">Hola, <%: Context.User.Identity.GetUserName()  %> - <%: miPerfil.ToString()  %></a> | <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </p> 
@@ -38,10 +38,38 @@
           <%--menu para Nuevo Ingreso--%>
     <div id="topnav" runat="server">
       <ul>
-        <li><a href="../AdministradorSistema/">Home</a></li>
-        <li><a href="../AdministradorSistema/VerUsuarios">Usuarios</a></li>
-        <li><a href="../AdministradorSistema/RolesUsuarios">Roles</a></li>
-        <li><a href="../Account/Register">Registrar</a></li>
+        <li><a href="../AdministradorSistema/"><i class="icon-home"></i> Home</a></li>
+        <li><a href="../AdministradorSistema/FacultadForm">Facultad</a></li>
+        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Academico  <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href="#"><i class="icon-book"></i> Carreras Externas</a></li>
+            <li><a href="#"><i class="icon-book"></i> Carreras Internas</a></li>
+            <li><a href="#"><i class="icon-book"></i> Materias Externas</a></li>
+            <li><a href="#"><i class="icon-book"></i> Materias Internas</a></li>
+            <li><a href="#"><i class="icon-book"></i> Universidades</a></li>
+            <li><a href="#"><i class="icon-book"></i> Materias Internas</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Consultas  <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="icon-book"></i> Alumnos</a></li>
+                <li><a href="#"><i class="icon-book"></i> Aspirantes</a></li>
+                <li><a href="pages/ConsultaPensum.aspx"><i class="icon-book"></i> Pensum</a></li>
+                <li><a href="#"><i class="icon-book"></i> Resultados</a></li>
+                <li><a href="#"><i class="icon-book"></i> Equivalencias</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Mantenimiento  <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href="../AdministradorSistema/VerUsuarios"><i class="icon-info-circled"></i> Usuarios</a></li>
+            <li><a href="../AdministradorSistema/RolesUsuarios"><i class="icon-user-circle"></i> Roles</a></li>
+            <li><a href="../Account/Register"><i class="icon-user-plus"></i> Registrar</a></li>
+            </ul>
+        </li>
+        
       </ul>
     </div>
   </div>
@@ -67,32 +95,23 @@
         </asp:ScriptManager>
         <div class="wrapper row3">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-                
+            </asp:ContentPlaceHolder>                
         </div>
                 <!--Pie de pagina con informacion del sistema-->
     <div class="wrapper row4">
   <div id="footer" class="clear"> 
     <!-- ####################################################################################################### -->
-    <div class="footbox">
-      <h2>Quick Links</h2>
+<%--    <div class="footbox">
+      <h2>Accesos</h2>
       <ul>
         <li><a href="#">&raquo; Homepage</a></li>
         <li><a href="#">&raquo; Contact Us</a></li>
-        <li><a href="#">&raquo; Sitemap</a></li>
-        <li><a href="#">&raquo; Privacy Policy</a></li>
-        <li><a href="#">&raquo; Terms of Use</a></li>
-        <li><a href="#">&raquo; Copyright Information</a></li>
-        <li><a href="#">&raquo; Website Matters</a></li>
       </ul>
     </div>
     <div class="footbox">
-      <h2>How To Find Us</h2>
+      <h2>Dirección</h2>
       <address>
       Address Line 1<br />
-      Address Line 2<br />
-      Town/City<br />
-      Postcode/Zip<br />
       <br />
       Tel: xxxx xxxx xxxxxx<br />
       Email: <a href="#">contact@domain.com</a>
@@ -100,7 +119,7 @@
     </div>
     <div class="fl_right">
       <div id="social">
-        <h2>Connect With Us</h2>
+        <h2>Enlaces</h2>
         <ul>
           <li><a href="#"><img src="../images/social/facebook.gif" alt="" /></a></li>
           <li><a href="#"><img src="../images/social/twitter.gif" alt="" /></a></li>
@@ -109,14 +128,14 @@
           <li class="last"><a href="#"><img src="../images/social/rss.gif" alt="" /></a></li>
         </ul>
       </div>
-      <div id="newsletter" class="clear">
+      <%--<div id="newsletter" class="clear">
           <fieldset>
             <legend>Subscribe To Our Newsletter:</legend>
             <asp:TextBox runat="server" ID="tbxBuesqueda" placeholder="Ingrese su E-mail aqui..." />
             <input type="text" id="subscribe" value="Submit" />
           </fieldset>
       </div>
-    </div>
+    </div>--%>
     <!-- ####################################################################################################### --> 
   </div>
 </div>

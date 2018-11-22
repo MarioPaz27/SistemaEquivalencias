@@ -39,14 +39,14 @@
         <classShapeMoniker Id="cb773027-4447-49bf-bf16-7911aac0219e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 5.8670068359375); (1.75 : 7.41429768880208); (3.5 : 7.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 5.8670068359375); (1.75 : 7.41429768880208); (3.5 : 7.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EquivalenciasDataContext/AspNetUsers/AspNetUsers_AspNetUserClaims" />
       <nodes>
         <classShapeMoniker Id="9fb6d381-f61e-4119-9a6a-140096ea11e8" />
         <classShapeMoniker Id="c5989f6d-7c75-4e61-8855-af8a4397864e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 5.06814697265625); (3.5 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 5.06814697265625); (3.5 : 5.06814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EquivalenciasDataContext/AspNetUsers/AspNetUsers_AspNetUserLogins" />
       <nodes>
         <classShapeMoniker Id="9fb6d381-f61e-4119-9a6a-140096ea11e8" />
@@ -60,5 +60,11 @@
         <classShapeMoniker Id="cb773027-4447-49bf-bf16-7911aac0219e" />
       </nodes>
     </associationConnector>
+    <classShape Id="775680a5-275f-4d08-bad9-9e7031f5d243" absoluteBounds="6.875, 5.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EquivalenciasDataContext/Equiv_Facultad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f4794a6-b073-4317-aac4-a7bc1a2e0c87" absoluteBounds="6.89, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

@@ -22,7 +22,7 @@ namespace SistemaEquivalencias.Account
             if (Request.QueryString["parameter"] == "Equivalencias")
             {
                 lbl_Test.Text = "Este Inicio de Sesión es únicamente para Equivalencias";
-                menu = "~/ProcEva-Otor_Equivalencias/Default";
+                menu = "~/ProcEva-Otor_Equivalencia/Default";
             }
 
             if (Request.QueryString["parameter"] == "Administrador")

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Equivalencias</title>
+<link rel="Stylesheet" href="../Content/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
@@ -36,9 +37,8 @@
           <%--menu para Nuevo Ingreso--%>
     <div id="topnav" runat="server">
       <ul>
-        <li><a href="../Default">Home</a></li>
-        <li><a href="../Contact.aspx">Contacto</a></li>
-        <li><a href="../About.aspx">Acerca de</a></li>
+        <li><a href="../ProSolicEs_NuevoIngreso/Default">Home</a></li>
+        <li><a href="../ProSolicEs_NuevoIngreso/FormularioAlumnoExterno">Contacto</a></li>
       </ul>
     </div>
   </div>
